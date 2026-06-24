@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { TelemetryCard } from "./TelemetryCard";
 
 export function HeroSection() {
   return (
@@ -32,17 +33,18 @@ export function HeroSection() {
 
         {/* Telemetry Sidebar */}
         <div className="hidden lg:flex absolute right-12 top-1/2 -translate-y-1/2 flex-col gap-6 items-end">
-          <div className="glass-panel p-6 rounded-lg border-r-2 border-primary-container text-right">
-            <div className="text-primary font-label text-xs uppercase tracking-widest mb-1">Status</div>
-            <div className="flex items-center gap-2 justify-end">
-              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-              <span className="text-2xl font-headline font-bold text-on-background uppercase">Systems Ready</span>
-            </div>
-          </div>
-          <div className="glass-panel p-6 rounded-lg border-r-2 border-outline-variant text-right opacity-60">
-            <div className="text-on-surface-variant font-label text-xs uppercase tracking-widest mb-1">Last Update</div>
-            <div className="text-2xl font-headline font-bold text-on-background uppercase">08.24.2024</div>
-          </div>
+          <TelemetryCard
+            borderClassName="border-primary-container"
+            label="Status"
+            statusIndicator={<span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>}
+            value="Systems Ready"
+          />
+          <TelemetryCard
+            borderClassName="border-outline-variant"
+            label="Last Update"
+            opacityClassName="opacity-60"
+            value="08.24.2024"
+          />
         </div>
     </section>
   );
