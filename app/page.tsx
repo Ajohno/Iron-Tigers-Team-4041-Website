@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -8,8 +9,8 @@ export default function Home() {
     <nav className="fixed top-0 w-full z-50 bg-[#131313] dark:bg-[#131313] flex justify-between items-center px-12 py-4 w-full">
       <div className="text-xl font-black text-[#FF8C00] tracking-tighter font-['Space_Grotesk'] uppercase tracking-wider">KINETIC_FRC</div>
       <div className="hidden md:flex gap-10 items-center">
-        <a className="text-[#FFB77D] border-b-2 border-[#FF8C00] pb-1 font-['Space_Grotesk'] uppercase tracking-wider transition-colors duration-300" href="#">Home</a>
-        <a className="text-[#E5E2E1] opacity-70 hover:text-[#FF8C00] transition-colors duration-300 font-['Space_Grotesk'] uppercase tracking-wider" href="/legacy-page.html">Legacy</a>
+        <Link className="text-[#FFB77D] border-b-2 border-[#FF8C00] pb-1 font-['Space_Grotesk'] uppercase tracking-wider transition-colors duration-300" href="/">Home</Link>
+        <Link className="text-[#E5E2E1] opacity-70 hover:text-[#FF8C00] transition-colors duration-300 font-['Space_Grotesk'] uppercase tracking-wider" href="/legacy">Legacy</Link>
         <a className="text-[#E5E2E1] opacity-70 hover:text-[#FF8C00] transition-colors duration-300 font-['Space_Grotesk'] uppercase tracking-wider" href="#">Sponsors</a>
         <a className="text-[#E5E2E1] opacity-70 hover:text-[#FF8C00] transition-colors duration-300 font-['Space_Grotesk'] uppercase tracking-wider" href="#">Contact</a>
       </div>
