@@ -1,6 +1,7 @@
 import { PageLayout } from "@/components/page-layout";
 import { BentoCard } from "@/components/home/BentoCard";
 import { HeroSection } from "@/components/home/HeroSection";
+import { LegacyTimeline } from "@/components/home/LegacyTimeline";
 import { SectionHeader } from "@/components/SectionHeader";
 
 export default function Home() {
@@ -60,47 +61,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Our Legacy Timeline */}
-      <section className="py-24 px-12 bg-background relative overflow-hidden">
-        <div className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-outline-variant opacity-20 hidden md:block"></div>
-        <SectionHeader align="center" className="mb-20 relative z-10" subtitle="Chronicle of Precision" title="Our Legacy" />
-
-        <div className="space-y-24 relative z-10">
-          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-0">
-            <div className="flex-1 md:text-right md:pr-16">
-              <h4 className="text-5xl font-headline font-black text-primary-container mb-2">2024</h4>
-              <h5 className="text-2xl font-headline font-bold text-on-background uppercase mb-4">World Finals Appearance</h5>
-              <p className="text-on-surface-variant max-w-md ml-auto">Ranked #2 in the Einstein Division. Highest scoring offensive bot in the New England district.</p>
-            </div>
-            <div className="w-12 h-12 rounded-full technical-gradient border-4 border-background flex items-center justify-center z-20"><span className="material-symbols-outlined text-on-primary-container text-sm">star</span></div>
-            <div className="flex-1 md:pl-16">
-              <div className="bg-surface-container-low p-4 rounded-lg inline-block"><span className="text-xs font-label text-primary uppercase">Milestone Reached</span></div>
-            </div>
-          </div>
-
-          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-0">
-            <div className="flex-1 md:text-right md:pr-16 order-2 md:order-1">
-              <div className="bg-surface-container-low p-4 rounded-lg inline-block"><span className="text-xs font-label text-on-surface-variant uppercase">Regional Champions</span></div>
-            </div>
-            <div className="w-12 h-12 rounded-full bg-surface-container-highest border-4 border-background flex items-center justify-center z-20 order-1 md:order-2"><span className="material-symbols-outlined text-on-surface text-sm">trophy</span></div>
-            <div className="flex-1 md:pl-16 order-3">
-              <h4 className="text-5xl font-headline font-black text-on-surface mb-2">2022</h4>
-              <h5 className="text-2xl font-headline font-bold text-on-background uppercase mb-4">New England District Winner</h5>
-              <p className="text-on-surface-variant max-w-md">Secured the blue banner after a dominant 12-0 run in the playoffs.</p>
-            </div>
-          </div>
-
-          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-0 opacity-60">
-            <div className="flex-1 md:text-right md:pr-16">
-              <h4 className="text-5xl font-headline font-black text-on-surface mb-2">2019</h4>
-              <h5 className="text-2xl font-headline font-bold text-on-background uppercase mb-4">Engineering Inspiration</h5>
-              <p className="text-on-surface-variant max-w-md ml-auto">Recognized for outstanding outreach and community STEM development programs.</p>
-            </div>
-            <div className="w-12 h-12 rounded-full bg-surface-container-highest border-4 border-background flex items-center justify-center z-20"><span className="material-symbols-outlined text-on-surface text-sm">memory</span></div>
-            <div className="flex-1 md:pl-16"></div>
-          </div>
-        </div>
-      </section>
+      <LegacyTimeline />
 
       <section className="py-24 px-12 bg-surface-container-low border-y border-outline-variant/10">
         <SectionHeader align="center" className="mb-16" subtitle="Fueling the Forge" subtitleTone="muted" title="Our Sponsors" />
