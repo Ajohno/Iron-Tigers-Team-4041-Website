@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { PageLayout } from "@/components/page-layout";
 import { HeroSection } from "@/components/home/HeroSection";
+import { SectionHeader } from "@/components/SectionHeader";
 
 export default function Home() {
   return (
@@ -10,10 +11,7 @@ export default function Home() {
 
       {/* Who We Are (Bento Grid Style) */}
       <section className="py-24 px-12 bg-surface-container-low">
-        <div className="mb-16">
-          <h2 className="text-4xl font-headline font-black text-on-background uppercase tracking-tight">Who We Are</h2>
-          <div className="w-20 h-1 bg-primary-container mt-4"></div>
-        </div>
+        <SectionHeader className="mb-16" showAccentLine title="Who We Are" />
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="md:col-span-2 bg-surface-container-high p-10 rounded-lg group hover:bg-surface-container-highest transition-colors">
             <div className="mb-8"><span className="material-symbols-outlined text-5xl text-primary">lightbulb</span></div>
@@ -55,10 +53,7 @@ export default function Home() {
       {/* Our Legacy Timeline */}
       <section className="py-24 px-12 bg-background relative overflow-hidden">
         <div className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-outline-variant opacity-20 hidden md:block"></div>
-        <div className="mb-20 text-center relative z-10">
-          <h2 className="text-4xl font-headline font-black text-on-background uppercase tracking-tight">Our Legacy</h2>
-          <p className="text-primary font-label uppercase tracking-[0.3em] mt-2">Chronicle of Precision</p>
-        </div>
+        <SectionHeader align="center" className="mb-20 relative z-10" subtitle="Chronicle of Precision" title="Our Legacy" />
 
         <div className="space-y-24 relative z-10">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-0">
@@ -98,10 +93,7 @@ export default function Home() {
       </section>
 
       <section className="py-24 px-12 bg-surface-container-low border-y border-outline-variant/10">
-        <div className="flex flex-col items-center mb-16">
-          <h2 className="text-4xl font-headline font-black text-on-background uppercase tracking-tight">Our Sponsors</h2>
-          <p className="text-on-surface-variant font-label text-sm uppercase tracking-widest mt-2">Fueling the Forge</p>
-        </div>
+        <SectionHeader align="center" className="mb-16" subtitle="Fueling the Forge" subtitleTone="muted" title="Our Sponsors" />
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 items-center justify-items-center opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
           <div className="flex flex-col items-center gap-2"><span className="material-symbols-outlined text-4xl">factory</span><span className="font-headline font-bold uppercase tracking-tighter text-on-surface">TechCorp</span></div>
           <div className="flex flex-col items-center gap-2"><span className="material-symbols-outlined text-4xl">flight</span><span className="font-headline font-bold uppercase tracking-tighter text-on-surface">Aerospace Ind.</span></div>
