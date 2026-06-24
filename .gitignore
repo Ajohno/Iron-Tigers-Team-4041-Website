@@ -32,3 +32,5 @@ Thumbs.db
 # misc
 *.tgz
 *.bak
+# Prisma generated client
+lib/generated/prisma/

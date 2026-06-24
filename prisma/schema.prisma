@@ -1,0 +1,11 @@
+// Prisma schema placeholder for the planned PostgreSQL-backed application.
+// Keep this schema model-free until database functionality is designed.
+
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
