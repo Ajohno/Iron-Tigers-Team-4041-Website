@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { PageLayout } from "@/components/page-layout";
+import { BentoCard } from "@/components/home/BentoCard";
 import { HeroSection } from "@/components/home/HeroSection";
 import { SectionHeader } from "@/components/SectionHeader";
 
@@ -13,40 +13,50 @@ export default function Home() {
       <section className="py-24 px-12 bg-surface-container-low">
         <SectionHeader className="mb-16" showAccentLine title="Who We Are" />
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div className="md:col-span-2 bg-surface-container-high p-10 rounded-lg group hover:bg-surface-container-highest transition-colors">
-            <div className="mb-8"><span className="material-symbols-outlined text-5xl text-primary">lightbulb</span></div>
-            <h3 className="text-3xl font-headline font-bold text-on-background mb-4 uppercase">Innovation</h3>
-            <p className="text-on-surface-variant leading-relaxed">Pushing the limits of FRC design with custom-machined drivetrains and sensor-fused navigation systems developed in our Maine forge.</p>
-          </div>
+          <BentoCard
+            className="md:col-span-2 bg-surface-container-high p-10 rounded-lg group hover:bg-surface-container-highest transition-colors"
+            description="Pushing the limits of FRC design with custom-machined drivetrains and sensor-fused navigation systems developed in our Maine forge."
+            descriptionClassName="text-on-surface-variant leading-relaxed"
+            icon="lightbulb"
+            iconClassName="text-5xl text-primary"
+            title="Innovation"
+            titleClassName="text-3xl font-headline font-bold text-on-background mb-4 uppercase"
+          />
 
-          <div className="bg-surface-container p-10 rounded-lg group border-t-2 border-primary/20">
-            <div className="mb-8"><span className="material-symbols-outlined text-4xl text-primary">groups</span></div>
-            <h3 className="text-xl font-headline font-bold text-on-background mb-4 uppercase tracking-widest">Leadership</h3>
-            <p className="text-sm text-on-surface-variant leading-relaxed">Empowering the next generation of engineers through collaborative problem solving and student-led project management.</p>
-          </div>
+          <BentoCard
+            className="bg-surface-container p-10 rounded-lg group border-t-2 border-primary/20"
+            description="Empowering the next generation of engineers through collaborative problem solving and student-led project management."
+            descriptionClassName="text-sm text-on-surface-variant leading-relaxed"
+            icon="groups"
+            iconClassName="text-4xl text-primary"
+            title="Leadership"
+            titleClassName="text-xl font-headline font-bold text-on-background mb-4 uppercase tracking-widest"
+          />
 
-          <div className="bg-surface-container p-10 rounded-lg group border-b-2 border-primary/20">
-            <div className="mb-8"><span className="material-symbols-outlined text-4xl text-primary">verified</span></div>
-            <h3 className="text-xl font-headline font-bold text-on-background mb-4 uppercase tracking-widest">Excellence</h3>
-            <p className="text-sm text-on-surface-variant leading-relaxed">A rigorous standard for code quality and mechanical reliability. Every bolt torqued, every line of code tested.</p>
-          </div>
+          <BentoCard
+            className="bg-surface-container p-10 rounded-lg group border-b-2 border-primary/20"
+            description="A rigorous standard for code quality and mechanical reliability. Every bolt torqued, every line of code tested."
+            descriptionClassName="text-sm text-on-surface-variant leading-relaxed"
+            icon="verified"
+            iconClassName="text-4xl text-primary"
+            title="Excellence"
+            titleClassName="text-xl font-headline font-bold text-on-background mb-4 uppercase tracking-widest"
+          />
 
-          <div className="md:col-span-4 bg-surface-container-highest p-10 rounded-lg flex flex-col md:flex-row items-center gap-12">
-            <div className="flex-1">
-              <div className="mb-6"><span className="material-symbols-outlined text-6xl text-primary-container">rocket_launch</span></div>
-              <h3 className="text-4xl font-headline font-bold text-on-background mb-6 uppercase">Community Impact</h3>
-              <p className="text-xl text-on-surface-variant leading-relaxed">Beyond the competition, we are building a STEM ecosystem in our local community, mentoring FLL teams and hosting public robotics workshops across Maine.</p>
-            </div>
-            <div className="relative w-full md:w-1/3 aspect-video bg-background rounded-lg overflow-hidden grayscale contrast-125">
-              <Image
-                className="object-cover"
-                alt="B&W high contrast photo of students teaching younger children how to assemble a simple gear mechanism"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB5B2Snk9YDPvEp7NLseFzniHRv4ulUUpQCa72wArP4WtwXSnCAjbkqSMLAqmTsQBX2oPQb8aUAS8_YwwCFmxnTmKsPatl_06MYNS41lR4mptxX2P2QV7asAZnCJmqjV-0fKZ0crJy7FS7TYwDFLIAmI0cJrNFVbCMTeYav4VkgQ-o1CX667CzGGtv7LGMnBrBMj0yGdGz7F_JhTlPOSsSH51ZLF2SkWluEuUsEinJEibvrWeKRh-OO42AeZPXKCrdtpe-Xe1G0NtF"
-                fill
-                sizes="(min-width: 768px) 33vw, 100vw"
-              />
-            </div>
-          </div>
+          <BentoCard
+            className="md:col-span-4 bg-surface-container-highest p-10 rounded-lg flex flex-col md:flex-row items-center gap-12"
+            description="Beyond the competition, we are building a STEM ecosystem in our local community, mentoring FLL teams and hosting public robotics workshops across Maine."
+            descriptionClassName="text-xl text-on-surface-variant leading-relaxed"
+            icon="rocket_launch"
+            iconClassName="text-6xl text-primary-container"
+            iconWrapperClassName="mb-6"
+            image={{
+              alt: "B&W high contrast photo of students teaching younger children how to assemble a simple gear mechanism",
+              src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDB5B2Snk9YDPvEp7NLseFzniHRv4ulUUpQCa72wArP4WtwXSnCAjbkqSMLAqmTsQBX2oPQb8aUAS8_YwwCFmxnTmKsPatl_06MYNS41lR4mptxX2P2QV7asAZnCJmqjV-0fKZ0crJy7FS7TYwDFLIAmI0cJrNFVbCMTeYav4VkgQ-o1CX667CzGGtv7LGMnBrBMj0yGdGz7F_JhTlPOSsSH51ZLF2SkWluEuUsEinJEibvrWeKRh-OO42AeZPXKCrdtpe-Xe1G0NtF",
+            }}
+            title="Community Impact"
+            titleClassName="text-4xl font-headline font-bold text-on-background mb-6 uppercase"
+          />
         </div>
       </section>
 
