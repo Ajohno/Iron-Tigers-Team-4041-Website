@@ -15,12 +15,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html className="dark" lang="en">
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <body className={`${inter.variable} ${spaceGrotesk.variable} bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container`}>
         {children}
       </body>

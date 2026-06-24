@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <>
@@ -18,10 +20,13 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-[921px] flex items-center overflow-hidden px-12">
         <div className="absolute inset-0 z-0">
-          <img
-            className="w-full h-full object-cover opacity-40 mix-blend-luminosity"
+          <Image
+            className="object-cover opacity-40 mix-blend-luminosity"
             alt="Close-up of a sophisticated FRC competition robot with orange metal frame and complex wiring in a high-tech workshop setting"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuA072d8qcUa5X6dPZ75bM-HZmXr5hQeifAWylR-Xmw82AWRDP5iSolvB7QbDE4NpuV0wKwstud9BnPPGDTTJKm1F8w5t2h2iqyyAVy_O4F1VS1oA9iqf7w9yXl3QYM6CL8X40ts-Pz_7w7qrOJreICUEMIxBYwlpFM5fMJheb7CG-rh4Tjzp0uTXxm266ny4Lw49FRCNOx3lcZUVZSVvMUauZdUG8EB1L7b5FHaAMMLyX_IDkPno40K57IQsVV8edfNpgWd87R1yE4M"
+            fill
+            priority
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
         </div>
@@ -88,11 +93,13 @@ export default function Home() {
               <h3 className="text-4xl font-headline font-bold text-on-background mb-6 uppercase">Community Impact</h3>
               <p className="text-xl text-on-surface-variant leading-relaxed">Beyond the competition, we are building a STEM ecosystem in our local community, mentoring FLL teams and hosting public robotics workshops across Maine.</p>
             </div>
-            <div className="w-full md:w-1/3 aspect-video bg-background rounded-lg overflow-hidden grayscale contrast-125">
-              <img
-                className="w-full h-full object-cover"
+            <div className="relative w-full md:w-1/3 aspect-video bg-background rounded-lg overflow-hidden grayscale contrast-125">
+              <Image
+                className="object-cover"
                 alt="B&W high contrast photo of students teaching younger children how to assemble a simple gear mechanism"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB5B2Snk9YDPvEp7NLseFzniHRv4ulUUpQCa72wArP4WtwXSnCAjbkqSMLAqmTsQBX2oPQb8aUAS8_YwwCFmxnTmKsPatl_06MYNS41lR4mptxX2P2QV7asAZnCJmqjV-0fKZ0crJy7FS7TYwDFLIAmI0cJrNFVbCMTeYav4VkgQ-o1CX667CzGGtv7LGMnBrBMj0yGdGz7F_JhTlPOSsSH51ZLF2SkWluEuUsEinJEibvrWeKRh-OO42AeZPXKCrdtpe-Xe1G0NtF"
+                fill
+                sizes="(min-width: 768px) 33vw, 100vw"
               />
             </div>
           </div>
@@ -165,7 +172,7 @@ export default function Home() {
       <section className="py-24 px-12 bg-background flex flex-col lg:flex-row gap-16">
         <div className="lg:w-1/2">
           <h2 className="text-5xl font-headline font-black text-on-background uppercase tracking-tight mb-8">Join the <span className="text-primary-container">Pride</span></h2>
-          <p className="text-xl text-on-surface-variant mb-12 leading-relaxed">Whether you're a student looking to learn, a mentor wanting to share expertise, or a community member interested in our mission, we'd love to hear from you.</p>
+          <p className="text-xl text-on-surface-variant mb-12 leading-relaxed">Whether you&rsquo;re a student looking to learn, a mentor wanting to share expertise, or a community member interested in our mission, we&rsquo;d love to hear from you.</p>
           <div className="space-y-6">
             <div className="flex items-center gap-6">
               <div className="w-12 h-12 bg-surface-container-high rounded flex items-center justify-center text-primary"><span className="material-symbols-outlined">location_on</span></div>
