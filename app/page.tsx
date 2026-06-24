@@ -172,7 +172,7 @@ export default function Home() {
       <section className="py-24 px-12 bg-background flex flex-col lg:flex-row gap-16">
         <div className="lg:w-1/2">
           <h2 className="text-5xl font-headline font-black text-on-background uppercase tracking-tight mb-8">Join the <span className="text-primary-container">Pride</span></h2>
-          <p className="text-xl text-on-surface-variant mb-12 leading-relaxed">Whether you&rsquo;re a student looking to learn, a mentor wanting to share expertise, or a community member interested in our mission, we&rsquo;d love to hear from you.</p>
+          <p className="text-xl text-on-surface-variant mb-12 leading-relaxed">{"Whether you're a student looking to learn, a mentor wanting to share expertise, or a community member interested in our mission, we'd love to hear from you."}</p>
           <div className="space-y-6">
             <div className="flex items-center gap-6">
               <div className="w-12 h-12 bg-surface-container-high rounded flex items-center justify-center text-primary"><span className="material-symbols-outlined">location_on</span></div>
