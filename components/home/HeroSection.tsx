@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CTAButton } from "@/components/ui/CTAButton";
 import { TelemetryCard } from "./TelemetryCard";
 
 export function HeroSection() {
@@ -26,8 +27,8 @@ export function HeroSection() {
             Precision-machined hardware meets high-performance autonomy. The Iron Tigers are redefining the boundaries of competitive engineering.
           </p>
           <div className="flex gap-4">
-            <button className="technical-gradient text-on-primary-container px-10 py-4 rounded font-headline font-bold uppercase tracking-widest active:scale-95 transition-all">Join the Team</button>
-            <button className="border border-outline-variant/40 hover:bg-surface-container-high text-on-surface px-10 py-4 rounded font-headline font-bold uppercase tracking-widest transition-all">View Specs</button>
+            <CTAButton>Join the Team</CTAButton>
+            <CTAButton variant="secondary">View Specs</CTAButton>
           </div>
         </div>
 
