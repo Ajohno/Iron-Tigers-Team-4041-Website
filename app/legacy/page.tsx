@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { PageLayout } from "@/components/page-layout";
+import { SeasonCard } from "@/components/legacy/SeasonCard";
 
 export default function LegacyPage() {
   return (
@@ -18,35 +18,22 @@ export default function LegacyPage() {
 
       <section className="px-12 mt-24 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-          <div className="md:col-span-8 bg-surface-container rounded-xl overflow-hidden relative group">
-            <div className="relative aspect-[16/7] w-full bg-surface-container-highest">
-              <Image alt="2024 Crescendo Robot" className="object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-80 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPsYfA_qYUEbl1LlM9TMBSyYC_YRmHsUVT2GUh65IAxzPB-qtBNVd4pSVqIAE3wdasgWsDr0wRFW7YPk2W2uw9zYtswGNuuyB0_yiXmLSY2mcX3odDOWLBv4tjxA9FgzPcrx42_YJvY-1TcmnswkC9H14sB1JfVeNbvIzoiuAyj2IfG-ICVtBt5TgINPoxlyAeIgouevxIpCoIOgdGzztA5v3DSavUPCjT0YrNHlji7NmiNEKKrdquazB_yEi5KnkhNmJ713tFM1q7" fill sizes="(min-width: 768px) 66vw, 100vw" />
-            </div>
-            <div className="p-8">
-              <div className="flex justify-between items-start mb-6">
-                <div>
-                  <h2 className="font-headline text-4xl font-bold uppercase tracking-tight">Crescendo (2024)</h2>
-                  <p className="font-label text-primary uppercase text-sm tracking-widest mt-1">Robot: Apex Prime</p>
-                </div>
-                <span className="bg-surface-container-highest px-3 py-1 text-xs font-label uppercase tracking-widest border border-outline-variant/20">Operational</span>
-              </div>
-              <p className="font-body text-on-surface-variant mb-8 max-w-xl">Designed for rapid-fire deployment and precision high-note delivery. Features an integrated swerve-drive with 1.2ms latency and an AI-assisted vision alignment system.</p>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-8 border-t border-outline-variant/20 pt-8">
-                <div>
-                  <p className="font-label text-[10px] uppercase text-on-surface-variant/60 tracking-widest mb-2">Awards</p>
-                  <ul className="font-body text-sm space-y-1"><li>Impact Award</li><li>Quality Award</li></ul>
-                </div>
-                <div>
-                  <p className="font-label text-[10px] uppercase text-on-surface-variant/60 tracking-widest mb-2">Performance</p>
-                  <ul className="font-body text-sm space-y-1"><li>Finalist - District</li><li>Top 1% - OPR</li></ul>
-                </div>
-                <div className="hidden md:block">
-                  <p className="font-label text-[10px] uppercase text-on-surface-variant/60 tracking-widest mb-2">Specs</p>
-                  <p className="font-body text-sm">4.2 m/s Peak Velocity</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <SeasonCard
+            awards={["Impact Award", "Quality Award"]}
+            className="md:col-span-8 bg-surface-container rounded-xl overflow-hidden relative group"
+            description="Designed for rapid-fire deployment and precision high-note delivery. Features an integrated swerve-drive with 1.2ms latency and an AI-assisted vision alignment system."
+            gameName="Crescendo"
+            image={{
+              alt: "2024 Crescendo Robot",
+              src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDPsYfA_qYUEbl1LlM9TMBSyYC_YRmHsUVT2GUh65IAxzPB-qtBNVd4pSVqIAE3wdasgWsDr0wRFW7YPk2W2uw9zYtswGNuuyB0_yiXmLSY2mcX3odDOWLBv4tjxA9FgzPcrx42_YJvY-1TcmnswkC9H14sB1JfVeNbvIzoiuAyj2IfG-ICVtBt5TgINPoxlyAeIgouevxIpCoIOgdGzztA5v3DSavUPCjT0YrNHlji7NmiNEKKrdquazB_yEi5KnkhNmJ713tFM1q7",
+            }}
+            performance={["Finalist - District", "Top 1% - OPR"]}
+            robotName="Apex Prime"
+            specs="4.2 m/s Peak Velocity"
+            status="Operational"
+            variant="featured"
+            year="2024"
+          />
 
           <div className="md:col-span-4 flex flex-col gap-6">
             <div className="bg-primary-container p-8 rounded-xl h-full flex flex-col justify-between text-on-primary-container">
@@ -63,35 +50,39 @@ export default function LegacyPage() {
             </div>
           </div>
 
-          <div className="md:col-span-6 bg-surface-container-low rounded-xl p-8 flex flex-col justify-between">
-            <div>
-              <div className="flex justify-between items-center mb-6">
-                <h2 className="font-headline text-3xl font-bold uppercase tracking-tight">Charged Up (2023)</h2>
-                <span className="font-label text-on-surface-variant/50 text-xs">ARCHIVED</span>
-              </div>
-              <div className="relative mb-6 h-48 w-full"><Image alt="Charged Up Robot" className="object-cover rounded-lg grayscale hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjhOzdLePh_7hmP_hdwb09ENkaGdUnaoKh2FjWoESWeEBoaEwgCzVJ9W_DKBIc-rRnMGQUQ-lLEUrObSlM1Tyr_RvESgxHsqR1Gwj_exO_JPH7uwq4e0JawuTBXUwWfG_GohdiPLxriH2zcM_rCMmVUYBkTgCSp0wvcKCqekMNcRSp2piuNb0ttoqgJOvau7Sdjhz9GpMJLTadtAJoIykUTBp46D3HNCZ56yinO7Ua7w39BeZbqoxp1Q3z_er2d3v_xeMG64gwdN3X" fill sizes="(min-width: 768px) 50vw, 100vw" /></div>
-              <p className="font-body text-on-surface-variant mb-6">Utilized a dual-stage telescoping elevator system for high-node placement. Breakthrough in PID control loops for zero-oscillation arm movement.</p>
-            </div>
-            <div className="flex gap-4">
-              <div className="bg-surface-container-highest px-4 py-3 rounded flex-1"><p className="font-label text-[10px] uppercase text-primary tracking-widest mb-1">Result</p><p className="font-headline font-bold">Semi-Finalists</p></div>
-              <div className="bg-surface-container-highest px-4 py-3 rounded flex-1"><p className="font-label text-[10px] uppercase text-primary tracking-widest mb-1">Award</p><p className="font-headline font-bold">Innovation</p></div>
-            </div>
-          </div>
+          <SeasonCard
+            className="md:col-span-6 bg-surface-container-low rounded-xl p-8 flex flex-col justify-between"
+            description="Utilized a dual-stage telescoping elevator system for high-node placement. Breakthrough in PID control loops for zero-oscillation arm movement."
+            gameName="Charged Up"
+            image={{
+              alt: "Charged Up Robot",
+              src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDjhOzdLePh_7hmP_hdwb09ENkaGdUnaoKh2FjWoESWeEBoaEwgCzVJ9W_DKBIc-rRnMGQUQ-lLEUrObSlM1Tyr_RvESgxHsqR1Gwj_exO_JPH7uwq4e0JawuTBXUwWfG_GohdiPLxriH2zcM_rCMmVUYBkTgCSp0wvcKCqekMNcRSp2piuNb0ttoqgJOvau7Sdjhz9GpMJLTadtAJoIykUTBp46D3HNCZ56yinO7Ua7w39BeZbqoxp1Q3z_er2d3v_xeMG64gwdN3X",
+            }}
+            stats={[
+              { label: "Result", value: "Semi-Finalists", className: "bg-surface-container-highest px-4 py-3 rounded flex-1" },
+              { label: "Award", value: "Innovation", className: "bg-surface-container-highest px-4 py-3 rounded flex-1" },
+            ]}
+            status="ARCHIVED"
+            variant="compact"
+            year="2023"
+          />
 
-          <div className="md:col-span-6 bg-surface-container rounded-xl p-8 flex flex-col justify-between border border-outline-variant/10">
-            <div>
-              <div className="flex justify-between items-center mb-6">
-                <h2 className="font-headline text-3xl font-bold uppercase tracking-tight">Rapid React (2022)</h2>
-                <span className="font-label text-on-surface-variant/50 text-xs">ARCHIVED</span>
-              </div>
-              <div className="relative mb-6 h-48 w-full"><Image alt="Rapid React Robot" className="object-cover rounded-lg grayscale hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANeUtIZ0_7zoldpL2s0t351uX-4zFnWTsdvaufDYuzePiS62Pum0p7zEB6gCW7K4_zYeYslRqKqGbQ9cC7YB9Ts-4KXf9qfcCO6uz3DcQkUVLcK56t84gWZmglj9pGAuuX1GWJWGup6xoPzQ1Ocp83DxUL2ZgSxtBKiwnHYDwvwjEvslpjuT_iMhqvfx2eNLPj3iU_gmwwaFkOSye2KG7ffTDPYGYiQu_-2Zikj5kkrUzx2ezhmaAgYmu2rMBVzu9ClyuWoKjcc2sc" fill sizes="(min-width: 768px) 50vw, 100vw" /></div>
-              <p className="font-body text-on-surface-variant mb-6">Precision ball intake with variable-angle shooter. Achieved 98% accuracy from the tarmac during autonomous periods.</p>
-            </div>
-            <div className="flex gap-4">
-              <div className="bg-surface-container-high px-4 py-3 rounded flex-1"><p className="font-label text-[10px] uppercase text-primary tracking-widest mb-1">Result</p><p className="font-headline font-bold">CHAMPS Qual</p></div>
-              <div className="bg-surface-container-high px-4 py-3 rounded flex-1"><p className="font-label text-[10px] uppercase text-primary tracking-widest mb-1">Award</p><p className="font-headline font-bold">Design Award</p></div>
-            </div>
-          </div>
+          <SeasonCard
+            className="md:col-span-6 bg-surface-container rounded-xl p-8 flex flex-col justify-between border border-outline-variant/10"
+            description="Precision ball intake with variable-angle shooter. Achieved 98% accuracy from the tarmac during autonomous periods."
+            gameName="Rapid React"
+            image={{
+              alt: "Rapid React Robot",
+              src: "https://lh3.googleusercontent.com/aida-public/AB6AXuANeUtIZ0_7zoldpL2s0t351uX-4zFnWTsdvaufDYuzePiS62Pum0p7zEB6gCW7K4_zYeYslRqKqGbQ9cC7YB9Ts-4KXf9qfcCO6uz3DcQkUVLcK56t84gWZmglj9pGAuuX1GWJWGup6xoPzQ1Ocp83DxUL2ZgSxtBKiwnHYDwvwjEvslpjuT_iMhqvfx2eNLPj3iU_gmwwaFkOSye2KG7ffTDPYGYiQu_-2Zikj5kkrUzx2ezhmaAgYmu2rMBVzu9ClyuWoKjcc2sc",
+            }}
+            stats={[
+              { label: "Result", value: "CHAMPS Qual", className: "bg-surface-container-high px-4 py-3 rounded flex-1" },
+              { label: "Award", value: "Design Award", className: "bg-surface-container-high px-4 py-3 rounded flex-1" },
+            ]}
+            status="ARCHIVED"
+            variant="compact"
+            year="2022"
+          />
         </div>
       </section>
 
