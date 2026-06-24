@@ -1,22 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
+import { PageLayout } from "@/components/page-layout";
 
 export default function Home() {
   return (
-    <div className="font-body">
-
-    {/* Top Navigation Bar */}
-    <nav className="fixed top-0 w-full z-50 bg-[#131313] dark:bg-[#131313] flex justify-between items-center px-12 py-4 w-full">
-      <div className="text-xl font-black text-[#FF8C00] tracking-tighter font-['Space_Grotesk'] uppercase tracking-wider">KINETIC_FRC</div>
-      <div className="hidden md:flex gap-10 items-center">
-        <Link className="text-[#FFB77D] border-b-2 border-[#FF8C00] pb-1 font-['Space_Grotesk'] uppercase tracking-wider transition-colors duration-300" href="/">Home</Link>
-        <Link className="text-[#E5E2E1] opacity-70 hover:text-[#FF8C00] transition-colors duration-300 font-['Space_Grotesk'] uppercase tracking-wider" href="/legacy">Legacy</Link>
-        <a className="text-[#E5E2E1] opacity-70 hover:text-[#FF8C00] transition-colors duration-300 font-['Space_Grotesk'] uppercase tracking-wider" href="#">Sponsors</a>
-        <a className="text-[#E5E2E1] opacity-70 hover:text-[#FF8C00] transition-colors duration-300 font-['Space_Grotesk'] uppercase tracking-wider" href="#">Contact</a>
-      </div>
-      <button className="bg-[#FF8C00] text-[#623200] px-6 py-2 rounded-lg font-bold font-['Space_Grotesk'] uppercase tracking-wider active:scale-95 transition-transform hover:bg-[#FFB77D] transition-colors duration-300">Support Us</button>
-    </nav>
-
+    <PageLayout activePage="home" variant="home">
     <main className="pt-20">
       {/* Hero Section */}
       <section className="relative min-h-[921px] flex items-center overflow-hidden px-12">
@@ -217,18 +204,6 @@ export default function Home() {
       </section>
     </main>
 
-    <footer className="bg-[#131313] dark:bg-[#131313] border-t border-[#564334]/20 w-full py-8">
-      <div className="flex flex-col items-center gap-4 px-12 w-full">
-        <div className="text-lg font-bold text-[#E5E2E1] font-headline uppercase">KINETIC PRECISION ROBOTICS</div>
-        <div className="flex gap-8">
-          <a className="text-[#E5E2E1]/50 hover:text-[#FFB77D] font-['Inter'] text-[10px] tracking-widest uppercase transition-opacity duration-200" href="#">Documentation</a>
-          <a className="text-[#E5E2E1]/50 hover:text-[#FFB77D] font-['Inter'] text-[10px] tracking-widest uppercase transition-opacity duration-200" href="#">Privacy Policy</a>
-          <a className="text-[#E5E2E1]/50 hover:text-[#FFB77D] font-['Inter'] text-[10px] tracking-widest uppercase transition-opacity duration-200" href="#">Safety Protocols</a>
-        </div>
-        <p className="text-[#FF8C00] font-['Inter'] text-[10px] tracking-widest uppercase mt-4">© 2024 KINETIC PRECISION ROBOTICS. ALL SYSTEMS OPERATIONAL.</p>
-      </div>
-    </footer>
-  
-    </div>
+    </PageLayout>
   );
 }
