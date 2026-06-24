@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <>
+    <div className="font-body">
 
     {/* Top Navigation Bar */}
     <nav className="fixed top-0 w-full z-50 bg-[#131313] dark:bg-[#131313] flex justify-between items-center px-12 py-4 w-full">
@@ -229,6 +229,6 @@ export default function Home() {
       </div>
     </footer>
   
-    </>
+    </div>
   );
 }
