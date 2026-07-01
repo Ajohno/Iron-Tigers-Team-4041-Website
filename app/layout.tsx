@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type React from "react";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import { AppThemeProvider } from "@/components/AppThemeProvider";
 import { siteConfig } from "@/lib/site";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -16,7 +17,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html className="dark" lang="en">
       <body className={`${inter.variable} ${spaceGrotesk.variable} bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container`}>
-        {children}
+        <AppThemeProvider>{children}</AppThemeProvider>
       </body>
     </html>
   );
