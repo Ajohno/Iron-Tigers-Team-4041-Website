@@ -1,5 +1,7 @@
-import { PageLayout } from "@/components/page-layout";
+import { LegacyJoinSection } from "@/components/legacy/LegacyJoinSection";
 import { SeasonCard } from "@/components/legacy/SeasonCard";
+import { TotalMetricsCard } from "@/components/legacy/TotalMetricsCard";
+import { PageLayout } from "@/components/page-layout";
 
 export default function LegacyPage() {
   return (
@@ -36,18 +38,7 @@ export default function LegacyPage() {
           />
 
           <div className="md:col-span-4 flex flex-col gap-6">
-            <div className="bg-primary-container p-8 rounded-xl h-full flex flex-col justify-between text-on-primary-container">
-              <span className="material-symbols-outlined text-4xl">precision_manufacturing</span>
-              <div>
-                <h3 className="font-headline text-3xl font-black uppercase leading-none mb-2">Total Metrics</h3>
-                <p className="font-body text-sm opacity-80 mb-6">A cumulative look at 12 years of engineering excellence.</p>
-                <div className="space-y-4">
-                  <div className="flex justify-between border-b border-on-primary-container/20 pb-2"><span className="font-label uppercase text-[10px]">Trophies Won</span><span className="font-headline font-bold">34</span></div>
-                  <div className="flex justify-between border-b border-on-primary-container/20 pb-2"><span className="font-label uppercase text-[10px]">Matches Logged</span><span className="font-headline font-bold">1,208</span></div>
-                  <div className="flex justify-between"><span className="font-label uppercase text-[10px]">Code Lines</span><span className="font-headline font-bold">1.2M</span></div>
-                </div>
-              </div>
-            </div>
+            <TotalMetricsCard />
           </div>
 
           <SeasonCard
@@ -86,28 +77,7 @@ export default function LegacyPage() {
         </div>
       </section>
 
-      <section className="mt-32 mb-20 px-12">
-        <div className="max-w-7xl mx-auto bg-surface-container-highest rounded-xl p-12 md:p-20 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary-container/10 to-transparent pointer-events-none"></div>
-          <div className="absolute -bottom-12 -right-12 text-[200px] font-black text-on-surface opacity-[0.03] select-none pointer-events-none leading-none uppercase font-headline">PRIDE</div>
-          <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="font-headline text-5xl md:text-6xl font-black uppercase tracking-tighter mb-6">JOIN THE <span className="text-primary-container">PRIDE</span></h2>
-              <p className="font-body text-lg text-on-surface-variant leading-relaxed mb-8">{"Become part of the next generation of engineers, coders, and innovators. We're looking for focused individuals ready to build the future of Kinetic Precision. No experience required—just a drive for excellence."}</p>
-              <div className="flex flex-wrap gap-4">
-                <button className="bg-primary-container text-on-primary-container px-8 py-4 rounded-lg font-headline font-bold uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all">Apply Now</button>
-                <button className="border border-outline-variant/30 text-on-surface px-8 py-4 rounded-lg font-headline font-bold uppercase tracking-widest hover:bg-surface-container transition-all">Our Shop</button>
-              </div>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-surface-container p-6 rounded-lg"><span className="material-symbols-outlined text-primary mb-4">engineering</span><h4 className="font-headline font-bold uppercase text-sm mb-2">Engineering</h4><p className="text-xs text-on-surface-variant font-body">Mechanical design, CAD, and fabrication.</p></div>
-              <div className="bg-surface-container p-6 rounded-lg"><span className="material-symbols-outlined text-primary mb-4">terminal</span><h4 className="font-headline font-bold uppercase text-sm mb-2">Programming</h4><p className="text-xs text-on-surface-variant font-body">Java, autonomous systems, and AI.</p></div>
-              <div className="bg-surface-container p-6 rounded-lg"><span className="material-symbols-outlined text-primary mb-4">campaign</span><h4 className="font-headline font-bold uppercase text-sm mb-2">Marketing</h4><p className="text-xs text-on-surface-variant font-body">Branding, outreach, and sponsorship.</p></div>
-              <div className="bg-surface-container p-6 rounded-lg"><span className="material-symbols-outlined text-primary mb-4">analytics</span><h4 className="font-headline font-bold uppercase text-sm mb-2">Strategy</h4><p className="text-xs text-on-surface-variant font-body">Data analysis and match scouting.</p></div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <LegacyJoinSection />
     </main>
 
     </PageLayout>
