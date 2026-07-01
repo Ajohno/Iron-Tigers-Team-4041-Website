@@ -1,3 +1,4 @@
+import Box from "@mui/material/Box";
 import type { ReactNode } from "react";
 
 type TelemetryCardProps = {
@@ -18,7 +19,7 @@ export function TelemetryCard({
   const hasStatusIndicator = Boolean(statusIndicator);
 
   return (
-    <div className={`glass-panel p-6 rounded-lg border-r-2 ${borderClassName} text-right ${opacityClassName}`.trim()}>
+    <Box className={`glass-panel p-6 rounded-lg border-r-2 ${borderClassName} text-right ${opacityClassName}`.trim()}>
       <div className={`${hasStatusIndicator ? "text-primary" : "text-on-surface-variant"} font-label text-xs uppercase tracking-widest mb-1`}>
         {label}
       </div>
@@ -30,6 +31,6 @@ export function TelemetryCard({
       ) : (
         <div className="text-2xl font-headline font-bold text-on-background uppercase">{value}</div>
       )}
-    </div>
+    </Box>
   );
 }

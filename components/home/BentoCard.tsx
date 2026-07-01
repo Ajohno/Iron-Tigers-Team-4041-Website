@@ -1,3 +1,4 @@
+import Box from "@mui/material/Box";
 import Image from "next/image";
 
 type BentoCardImage = {
@@ -37,7 +38,7 @@ export function BentoCard({
   );
 
   return (
-    <div className={className}>
+    <Box className={className}>
       {image ? (
         <>
           <div className="flex-1">{content}</div>
@@ -54,6 +55,6 @@ export function BentoCard({
       ) : (
         content
       )}
-    </div>
+    </Box>
   );
 }
