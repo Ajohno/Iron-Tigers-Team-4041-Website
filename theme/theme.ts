@@ -16,6 +16,10 @@ const ironTigersColors = {
   outline: "#a48c7a",
   outlineVariant: "#564334",
   technicalBlue: "#85cfff",
+  error: "#ffb4ab",
+  errorContainer: "#93000a",
+  success: "#9adca6",
+  successContainer: "#1f4f2a",
 };
 
 export const ironTigersTheme = createTheme({
@@ -40,6 +44,16 @@ export const ironTigersTheme = createTheme({
     info: {
       main: ironTigersColors.technicalBlue,
       contrastText: "#00344c",
+    },
+    error: {
+      main: ironTigersColors.error,
+      dark: ironTigersColors.errorContainer,
+      contrastText: "#690005",
+    },
+    success: {
+      main: ironTigersColors.success,
+      dark: ironTigersColors.successContainer,
+      contrastText: "#07210d",
     },
     text: {
       primary: ironTigersColors.textPrimary,
@@ -139,6 +153,141 @@ export const ironTigersTheme = createTheme({
               backgroundColor: ironTigersColors.surfaceHigh,
               borderColor: ironTigersColors.primary,
             },
+          },
+        },
+      ],
+    },
+
+    MuiTextField: {
+      defaultProps: {
+        fullWidth: true,
+        variant: "outlined",
+      },
+    },
+    MuiFormControl: {
+      defaultProps: {
+        fullWidth: true,
+      },
+      styleOverrides: {
+        root: {
+          minWidth: 0,
+        },
+      },
+    },
+    MuiInputLabel: {
+      styleOverrides: {
+        root: {
+          color: ironTigersColors.textSecondary,
+          fontFamily: "var(--font-space-grotesk), Space Grotesk, sans-serif",
+          fontSize: "0.75rem",
+          fontWeight: 700,
+          letterSpacing: "0.12em",
+          textTransform: "uppercase",
+          "&.Mui-focused": {
+            color: ironTigersColors.primary,
+          },
+          "&.Mui-error": {
+            color: ironTigersColors.error,
+          },
+        },
+      },
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          backgroundColor: ironTigersColors.surfaceHigh,
+          borderRadius: 4,
+          color: ironTigersColors.textPrimary,
+          fontFamily: "var(--font-inter), Inter, sans-serif",
+          "& .MuiOutlinedInput-notchedOutline": {
+            borderColor: "rgba(86, 67, 52, 0.6)",
+          },
+          "&:hover .MuiOutlinedInput-notchedOutline": {
+            borderColor: ironTigersColors.primary,
+          },
+          "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+            borderColor: ironTigersColors.primaryContainer,
+            borderWidth: 2,
+          },
+          "&.Mui-error .MuiOutlinedInput-notchedOutline": {
+            borderColor: ironTigersColors.error,
+          },
+        },
+        input: {
+          "&::placeholder": {
+            color: "rgba(221, 193, 174, 0.45)",
+            opacity: 1,
+          },
+        },
+        notchedOutline: {
+          transition: "border-color 150ms ease, border-width 150ms ease",
+        },
+      },
+    },
+    MuiSelect: {
+      styleOverrides: {
+        icon: {
+          color: ironTigersColors.primary,
+        },
+        select: {
+          color: ironTigersColors.textPrimary,
+        },
+      },
+    },
+    MuiFormHelperText: {
+      styleOverrides: {
+        root: {
+          color: ironTigersColors.textSecondary,
+          fontFamily: "var(--font-inter), Inter, sans-serif",
+          marginLeft: 0,
+          "&.Mui-error": {
+            color: ironTigersColors.error,
+          },
+        },
+      },
+    },
+    MuiAlert: {
+      styleOverrides: {
+        root: {
+          alignItems: "center",
+          borderRadius: 4,
+          fontFamily: "var(--font-inter), Inter, sans-serif",
+        },
+        icon: {
+          color: "inherit",
+        },
+      },
+      variants: [
+        {
+          props: { severity: "error" },
+          style: {
+            backgroundColor: "rgba(147, 0, 10, 0.35)",
+            border: `1px solid ${ironTigersColors.error}`,
+            color: ironTigersColors.error,
+          },
+        },
+        {
+          props: { severity: "warning" },
+          style: {
+            backgroundColor: "rgba(106, 59, 15, 0.45)",
+            border: `1px solid ${ironTigersColors.primaryContainer}`,
+            color: ironTigersColors.primary,
+          },
+        },
+        {
+          props: { severity: "success" },
+          style: {
+            backgroundColor: "rgba(31, 79, 42, 0.45)",
+            border: `1px solid ${ironTigersColors.success}`,
+            color: ironTigersColors.success,
+          },
+        },
+        {
+          props: { severity: "info" },
+          style: {
+            backgroundColor: "rgba(0, 67, 96, 0.35)",
+            border: `1px solid ${ironTigersColors.technicalBlue}`,
+            color: ironTigersColors.technicalBlue,
           },
         },
       ],
