@@ -12,7 +12,7 @@ export function Navbar({ activePage }: NavbarProps) {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#131313] dark:bg-[#131313] flex justify-between items-center px-12 py-4 w-full">
-      <div className="text-xl font-black text-[#FF8C00] tracking-tighter font-['Space_Grotesk'] uppercase tracking-wider">FRC</div>
+      <div className="text-xl font-black text-[#FF8C00] tracking-tighter font-['Space_Grotesk'] uppercase tracking-wider">Iron Tigers</div>
       <div className="hidden md:flex gap-10 items-center">
         <Link className={homeLinkClass} href="/">Home</Link>
         <Link className={legacyLinkClass} href="/legacy">Legacy</Link>
