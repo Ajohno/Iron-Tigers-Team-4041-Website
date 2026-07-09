@@ -113,14 +113,6 @@ export const ironTigersTheme = createTheme({
     borderRadius: 4,
   },
   components: {
-    MuiCssBaseline: {
-      styleOverrides: {
-        body: {
-          backgroundColor: ironTigersColors.background,
-          color: ironTigersColors.textPrimary,
-        },
-      },
-    },
     MuiButton: {
       styleOverrides: {
         root: {
