@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Season History | KINETIC_FRC</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-container": "#e9a771",
+              "surface-dim": "#131313",
+              "inverse-on-surface": "#313030",
+              "on-primary-fixed-variant": "#6e3900",
+              "on-surface": "#e5e2e1",
+              "surface-variant": "#353534",
+              "on-surface-variant": "#ddc1ae",
+              "primary-fixed": "#ffdcc3",
+              "on-primary-fixed": "#2f1500",
+              "inverse-surface": "#e5e2e1",
+              "tertiary-fixed": "#c7e7ff",
+              "surface-container-high": "#2a2a2a",
+              "primary-container": "#ff8c00",
+              "on-background": "#e5e2e1",
+              background: "#131313",
+              "outline-variant": "#564334",
+              "on-error": "#690005",
+              "on-tertiary-fixed": "#001e2e",
+              "tertiary-fixed-dim": "#85cfff",
+              "secondary-container": "#6a3b0f",
+              "secondary-fixed-dim": "#fdb881",
+              "secondary-fixed": "#ffdcc3",
+              "on-secondary": "#4d2600",
+              "inverse-primary": "#904d00",
+              "surface-container": "#201f1f",
+              "surface-bright": "#393939",
+              "surface-container-low": "#1c1b1b",
+              tertiary: "#85cfff",
+              surface: "#131313",
+              "tertiary-container": "#00b5fc",
+              "surface-tint": "#ffb77d",
+              "on-tertiary-container": "#004360",
+              primary: "#ffb77d",
+              secondary: "#fdb881",
+              "on-secondary-fixed": "#2f1500",
+              "on-error-container": "#ffdad6",
+              outline: "#a48c7a",
+              error: "#ffb4ab",
+              "error-container": "#93000a",
+              "primary-fixed-dim": "#ffb77d",
+              "on-tertiary": "#00344c",
+              "surface-container-highest": "#353534",
+              "on-primary-container": "#623200",
+              "on-primary": "#4d2600",
+              "surface-container-lowest": "#0e0e0e",
+              "on-secondary-fixed-variant": "#6a3b0f",
+              "on-tertiary-fixed-variant": "#004c6c"
+            },
+            fontFamily: {
+              headline: ["Space Grotesk"],
+              body: ["Inter"],
+              label: ["Space Grotesk"]
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem"
+            }
+          }
+        }
+      };
+    </script>
+    <link href="index.css" rel="stylesheet" />
+  </head>
+  <body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container">
+    <nav class="fixed top-0 w-full z-50 bg-[#131313] dark:bg-[#131313] flex justify-between items-center px-12 py-4 w-full">
+      <div class="text-xl font-black text-[#FF8C00] tracking-tighter uppercase font-['Space_Grotesk']">KINETIC_FRC</div>
+      <div class="hidden md:flex items-center gap-8">
+        <a class="font-['Space_Grotesk'] uppercase tracking-wider text-[#E5E2E1] opacity-70 hover:text-[#FF8C00] transition-colors duration-300" href="index.html">Home</a>
+        <a class="font-['Space_Grotesk'] uppercase tracking-wider text-[#FFB77D] border-b-2 border-[#FF8C00] pb-1 hover:text-[#FF8C00] transition-colors duration-300" href="legacy-page.html">Legacy</a>
+        <a class="font-['Space_Grotesk'] uppercase tracking-wider text-[#E5E2E1] opacity-70 hover:text-[#FF8C00] transition-colors duration-300" href="#">Sponsors</a>
+        <a class="font-['Space_Grotesk'] uppercase tracking-wider text-[#E5E2E1] opacity-70 hover:text-[#FF8C00] transition-colors duration-300" href="#">Contact</a>
+      </div>
+      <button class="bg-primary-container text-on-primary-container px-6 py-2 font-headline uppercase text-sm font-bold tracking-widest active:scale-95 transition-transform rounded-lg">Support Us</button>
+    </nav>
+
+    <main class="pt-24 pb-12">
+      <header class="px-12 py-20 bg-surface-container-low">
+        <div class="max-w-7xl mx-auto">
+          <p class="font-label uppercase tracking-[0.3em] text-primary text-xs mb-4">FRC TEAM 9999 / IRON TIGERS</p>
+          <h1 class="font-headline text-7xl md:text-8xl font-black tracking-tighter uppercase leading-[0.9]">SEASON<br /><span class="text-primary-container">HISTORY</span></h1>
+          <div class="mt-8 flex items-center gap-4">
+            <div class="w-12 h-[2px] bg-outline-variant/40"></div>
+            <p class="font-body text-on-surface-variant max-w-lg leading-relaxed">A retrospective look at the evolution of Kinetic Precision. From raw steel to autonomous mastery, this is our technical lineage.</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="px-12 mt-24 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+          <div class="md:col-span-8 bg-surface-container rounded-xl overflow-hidden relative group">
+            <div class="aspect-[16/7] w-full bg-surface-container-highest">
+              <img alt="2024 Crescendo Robot" class="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-80 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPsYfA_qYUEbl1LlM9TMBSyYC_YRmHsUVT2GUh65IAxzPB-qtBNVd4pSVqIAE3wdasgWsDr0wRFW7YPk2W2uw9zYtswGNuuyB0_yiXmLSY2mcX3odDOWLBv4tjxA9FgzPcrx42_YJvY-1TcmnswkC9H14sB1JfVeNbvIzoiuAyj2IfG-ICVtBt5TgINPoxlyAeIgouevxIpCoIOgdGzztA5v3DSavUPCjT0YrNHlji7NmiNEKKrdquazB_yEi5KnkhNmJ713tFM1q7" />
+            </div>
+            <div class="p-8">
+              <div class="flex justify-between items-start mb-6">
+                <div>
+                  <h2 class="font-headline text-4xl font-bold uppercase tracking-tight">Crescendo (2024)</h2>
+                  <p class="font-label text-primary uppercase text-sm tracking-widest mt-1">Robot: Apex Prime</p>
+                </div>
+                <span class="bg-surface-container-highest px-3 py-1 text-xs font-label uppercase tracking-widest border border-outline-variant/20">Operational</span>
+              </div>
+              <p class="font-body text-on-surface-variant mb-8 max-w-xl">Designed for rapid-fire deployment and precision high-note delivery. Features an integrated swerve-drive with 1.2ms latency and an AI-assisted vision alignment system.</p>
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-8 border-t border-outline-variant/20 pt-8">
+                <div>
+                  <p class="font-label text-[10px] uppercase text-on-surface-variant/60 tracking-widest mb-2">Awards</p>
+                  <ul class="font-body text-sm space-y-1"><li>Impact Award</li><li>Quality Award</li></ul>
+                </div>
+                <div>
+                  <p class="font-label text-[10px] uppercase text-on-surface-variant/60 tracking-widest mb-2">Performance</p>
+                  <ul class="font-body text-sm space-y-1"><li>Finalist - District</li><li>Top 1% - OPR</li></ul>
+                </div>
+                <div class="hidden md:block">
+                  <p class="font-label text-[10px] uppercase text-on-surface-variant/60 tracking-widest mb-2">Specs</p>
+                  <p class="font-body text-sm">4.2 m/s Peak Velocity</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:col-span-4 flex flex-col gap-6">
+            <div class="bg-primary-container p-8 rounded-xl h-full flex flex-col justify-between text-on-primary-container">
+              <span class="material-symbols-outlined text-4xl">precision_manufacturing</span>
+              <div>
+                <h3 class="font-headline text-3xl font-black uppercase leading-none mb-2">Total Metrics</h3>
+                <p class="font-body text-sm opacity-80 mb-6">A cumulative look at 12 years of engineering excellence.</p>
+                <div class="space-y-4">
+                  <div class="flex justify-between border-b border-on-primary-container/20 pb-2"><span class="font-label uppercase text-[10px]">Trophies Won</span><span class="font-headline font-bold">34</span></div>
+                  <div class="flex justify-between border-b border-on-primary-container/20 pb-2"><span class="font-label uppercase text-[10px]">Matches Logged</span><span class="font-headline font-bold">1,208</span></div>
+                  <div class="flex justify-between"><span class="font-label uppercase text-[10px]">Code Lines</span><span class="font-headline font-bold">1.2M</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:col-span-6 bg-surface-container-low rounded-xl p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center mb-6">
+                <h2 class="font-headline text-3xl font-bold uppercase tracking-tight">Charged Up (2023)</h2>
+                <span class="font-label text-on-surface-variant/50 text-xs">ARCHIVED</span>
+              </div>
+              <img alt="Charged Up Robot" class="w-full h-48 object-cover rounded-lg mb-6 grayscale hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjhOzdLePh_7hmP_hdwb09ENkaGdUnaoKh2FjWoESWeEBoaEwgCzVJ9W_DKBIc-rRnMGQUQ-lLEUrObSlM1Tyr_RvESgxHsqR1Gwj_exO_JPH7uwq4e0JawuTBXUwWfG_GohdiPLxriH2zcM_rCMmVUYBkTgCSp0wvcKCqekMNcRSp2piuNb0ttoqgJOvau7Sdjhz9GpMJLTadtAJoIykUTBp46D3HNCZ56yinO7Ua7w39BeZbqoxp1Q3z_er2d3v_xeMG64gwdN3X" />
+              <p class="font-body text-on-surface-variant mb-6">Utilized a dual-stage telescoping elevator system for high-node placement. Breakthrough in PID control loops for zero-oscillation arm movement.</p>
+            </div>
+            <div class="flex gap-4">
+              <div class="bg-surface-container-highest px-4 py-3 rounded flex-1"><p class="font-label text-[10px] uppercase text-primary tracking-widest mb-1">Result</p><p class="font-headline font-bold">Semi-Finalists</p></div>
+              <div class="bg-surface-container-highest px-4 py-3 rounded flex-1"><p class="font-label text-[10px] uppercase text-primary tracking-widest mb-1">Award</p><p class="font-headline font-bold">Innovation</p></div>
+            </div>
+          </div>
+
+          <div class="md:col-span-6 bg-surface-container rounded-xl p-8 flex flex-col justify-between border border-outline-variant/10">
+            <div>
+              <div class="flex justify-between items-center mb-6">
+                <h2 class="font-headline text-3xl font-bold uppercase tracking-tight">Rapid React (2022)</h2>
+                <span class="font-label text-on-surface-variant/50 text-xs">ARCHIVED</span>
+              </div>
+              <img alt="Rapid React Robot" class="w-full h-48 object-cover rounded-lg mb-6 grayscale hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANeUtIZ0_7zoldpL2s0t351uX-4zFnWTsdvaufDYuzePiS62Pum0p7zEB6gCW7K4_zYeYslRqKqGbQ9cC7YB9Ts-4KXf9qfcCO6uz3DcQkUVLcK56t84gWZmglj9pGAuuX1GWJWGup6xoPzQ1Ocp83DxUL2ZgSxtBKiwnHYDwvwjEvslpjuT_iMhqvfx2eNLPj3iU_gmwwaFkOSye2KG7ffTDPYGYiQu_-2Zikj5kkrUzx2ezhmaAgYmu2rMBVzu9ClyuWoKjcc2sc" />
+              <p class="font-body text-on-surface-variant mb-6">Precision ball intake with variable-angle shooter. Achieved 98% accuracy from the tarmac during autonomous periods.</p>
+            </div>
+            <div class="flex gap-4">
+              <div class="bg-surface-container-high px-4 py-3 rounded flex-1"><p class="font-label text-[10px] uppercase text-primary tracking-widest mb-1">Result</p><p class="font-headline font-bold">CHAMPS Qual</p></div>
+              <div class="bg-surface-container-high px-4 py-3 rounded flex-1"><p class="font-label text-[10px] uppercase text-primary tracking-widest mb-1">Award</p><p class="font-headline font-bold">Design Award</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-32 mb-20 px-12">
+        <div class="max-w-7xl mx-auto bg-surface-container-highest rounded-xl p-12 md:p-20 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary-container/10 to-transparent pointer-events-none"></div>
+          <div class="absolute -bottom-12 -right-12 text-[200px] font-black text-on-surface opacity-[0.03] select-none pointer-events-none leading-none uppercase font-headline">PRIDE</div>
+          <div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="font-headline text-5xl md:text-6xl font-black uppercase tracking-tighter mb-6">JOIN THE <span class="text-primary-container">PRIDE</span></h2>
+              <p class="font-body text-lg text-on-surface-variant leading-relaxed mb-8">Become part of the next generation of engineers, coders, and innovators. We're looking for focused individuals ready to build the future of Kinetic Precision. No experience required—just a drive for excellence.</p>
+              <div class="flex flex-wrap gap-4">
+                <button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-lg font-headline font-bold uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all">Apply Now</button>
+                <button class="border border-outline-variant/30 text-on-surface px-8 py-4 rounded-lg font-headline font-bold uppercase tracking-widest hover:bg-surface-container transition-all">Our Shop</button>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-surface-container p-6 rounded-lg"><span class="material-symbols-outlined text-primary mb-4">engineering</span><h4 class="font-headline font-bold uppercase text-sm mb-2">Engineering</h4><p class="text-xs text-on-surface-variant font-body">Mechanical design, CAD, and fabrication.</p></div>
+              <div class="bg-surface-container p-6 rounded-lg"><span class="material-symbols-outlined text-primary mb-4">terminal</span><h4 class="font-headline font-bold uppercase text-sm mb-2">Programming</h4><p class="text-xs text-on-surface-variant font-body">Java, autonomous systems, and AI.</p></div>
+              <div class="bg-surface-container p-6 rounded-lg"><span class="material-symbols-outlined text-primary mb-4">campaign</span><h4 class="font-headline font-bold uppercase text-sm mb-2">Marketing</h4><p class="text-xs text-on-surface-variant font-body">Branding, outreach, and sponsorship.</p></div>
+              <div class="bg-surface-container p-6 rounded-lg"><span class="material-symbols-outlined text-primary mb-4">analytics</span><h4 class="font-headline font-bold uppercase text-sm mb-2">Strategy</h4><p class="text-xs text-on-surface-variant font-body">Data analysis and match scouting.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#131313] dark:bg-[#131313] w-full py-8 border-t border-[#564334]/20 flex flex-col items-center gap-4 px-12 w-full">
+      <div class="text-lg font-bold text-[#E5E2E1] font-['Inter'] uppercase tracking-widest">KINETIC PRECISION ROBOTICS</div>
+      <div class="flex gap-8">
+        <a class="font-['Inter'] text-[10px] tracking-widest uppercase text-[#E5E2E1]/50 hover:text-[#FFB77D] transition-opacity duration-200" href="#">Documentation</a>
+        <a class="font-['Inter'] text-[10px] tracking-widest uppercase text-[#E5E2E1]/50 hover:text-[#FFB77D] transition-opacity duration-200" href="#">Privacy Policy</a>
+        <a class="font-['Inter'] text-[10px] tracking-widest uppercase text-[#E5E2E1]/50 hover:text-[#FFB77D] transition-opacity duration-200" href="#">Safety Protocols</a>
+      </div>
+      <div class="font-['Inter'] text-[10px] tracking-widest uppercase text-[#E5E2E1]/50 mt-4">© 2024 KINETIC PRECISION ROBOTICS. ALL SYSTEMS OPERATIONAL.</div>
+    </footer>
+  </body>
+</html>
