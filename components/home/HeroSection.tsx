@@ -18,7 +18,7 @@ export function HeroSection() {
         </div>
         <div className="relative z-10 max-w-4xl">
           <div className="inline-block py-1 px-3 mb-6 bg-surface-container-highest border-l-4 border-primary-container">
-            <span className="text-primary font-label text-sm uppercase tracking-[0.2em]">TEAM 9999 • MAINE, USA</span>
+            <span className="text-primary font-label text-sm uppercase tracking-[0.2em]">TEAM 4041 • MAINE, USA</span>
           </div>
           <h1 className="text-6xl md:text-8xl font-headline font-black text-on-background tracking-tighter leading-[0.9] mb-8 uppercase">
             Engineering the <br /><span className="text-primary-container">Future of Robotics</span>
